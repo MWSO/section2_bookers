@@ -1,12 +1,12 @@
 <p>
   <strong>本のタイトル:</strong>
-  <%= @book.本のタイトル %>
+  <%= @book.title %>
 </p>
 
 <p>
   <strong>感想:</strong>
-  <%= @book.感想 %>
+  <%= @book.body %>
 </p>
 
-<%= link_to Edit, edit_book_path(book.id) %>
-<%= link_to Back, books_path %>
+<%= link_to "Edit", edit_book_path(@book.id) %>
+<%= link_to "Back", books_path %>

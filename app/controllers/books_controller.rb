@@ -4,12 +4,14 @@ class BooksController < ApplicationController
   end
 
   def create
-    book = Book.new
+    book = Book.new(book_params)
     book.save
-    redirect_to "book_path"
+    redirect_to book_path(book.id)
   end
 
   def index
+    @books = Book.all
+    @book = Book.new
   end
 
   def show
@@ -35,6 +37,6 @@ class BooksController < ApplicationController
   private
 
   def book_params
-    params.require(:book).permit(:本のタイトル, :感想)
+    params.require(:book).permit(:title, :body)
   end
 end

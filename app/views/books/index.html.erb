@@ -1,18 +1,35 @@
-<h2>New book</h2>
-<%= form_with @book do |f| %>
+<h1 class= "header">Books</h1>
+<% @books.each do |book| %>
+<table class= "book-list">
+  <thead class= "book-head">
+   <th>本のタイトル</th>
+   <th>感想</th>
+   <th colspan="3"></th>
+ </thead>
+ <tbody class= book-body>
+  <tr><%= book.title %></tr>
+  <tr><%= book.body %></tr>
+  <tr><%= link_to"Show", book_path(book.id) %></tr>
+  <tr><%= link_to"Edit",  edit_book_path(book.id) %></tr>
+  <tr><%= link_to"Destroy", book_path(book.id), method: :delete, data: { confirm: "Are you sure?" }  %>
+  </tr>
+ </tbody>
+</table>
+<% end %>
+
+<h2 class= "header">New book</h2>
+<%= form_with model: @book do |f| %>
   <div>
-   本の感想
-   <%= f.text_field :本のタイトル %>
+   本のタイトル<br>
+   <%= f.text_field :title %>
   </div>
   <div>
-   感想
-   <%= f.text_area :感想 %>
+   感想<br>
+   <%= f.text_area :body %>
   </div>
   <div>
-   Create Book
    <%= f.submit %>
   </div>
 
 <% end %>
-
 
