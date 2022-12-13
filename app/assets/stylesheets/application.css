@@ -17,3 +17,62 @@
 .top-link{
   margin: 33px;
 }
+
+body{
+ margin: 33px;
+ font-size: 13px;
+ line-height: 18px;
+}
+
+h1{
+  margin: 33px;
+  margin-bottom: 20px;
+  margin-left: 0;
+}
+
+h2{
+  margin: 33px;
+  margin-bottom: 20px;
+  margin-left: 0;
+}
+
+.book-list{
+border-spacing: 5px;
+table-layout: fixed;
+
+}
+
+
+.text{
+  margin-bottom: 10px;
+}
+
+.button{
+  margin-bottom: 10px;
+}
+
+.show{
+  display: inline-block;
+  border-right: 1px solid;
+  padding-right: 5px;
+}
+
+.edit{
+  display: inline-block;
+  border-right: 1px solid;
+  padding-right: 5px;
+}
+
+.back{
+  display: inline-block;
+}
+
+.show-text{
+  margin: 33px;
+}
+
+.show-body{
+  padding-left: 53px;
+
+}
+

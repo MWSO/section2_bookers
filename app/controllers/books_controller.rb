@@ -9,6 +9,7 @@ class BooksController < ApplicationController
      redirect_to book_path(@book.id)
      flash[:notice] = "Book was successfully created."
     else
+     @books = Book.all
      render :index
     end
   end
@@ -40,6 +41,7 @@ class BooksController < ApplicationController
     book = Book.find(params[:id])
     book.destroy
     redirect_to books_path
+    flash[:notice] = "Book was successfully deleted"
   end
 
   private
